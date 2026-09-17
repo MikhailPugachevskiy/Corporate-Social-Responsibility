@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSR Webapp - Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4.5 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Page-specific CSS for Landing Page (points one level up to css/) -->
+    <link rel="stylesheet" href="../css/landing.css">
+</head>
+
+<body>
+    <!-- Main Navigation Bar with 6 main chapters (Locked initially until user completes form) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand font-weight-bold" href="landing.html">CSR Thesis</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto" id="mainNavLinks">
+                    <li class="nav-item">
+                        <a class="nav-link locked-nav disabled" href="introduction.html">1. Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link locked-nav disabled" href="definitions.html">2. Definitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link locked-nav disabled" href="facets.html">3. Facets of CSR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link locked-nav disabled" href="case-studies.html">4. Case Studies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link locked-nav disabled" href="pros-cons.html">5. Pros & Cons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link locked-nav disabled" href="perspectives.html">6. Perspectives</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Hero Section with Paper Title -->
+        <div class="container-fluid hero d-flex align-items-center justify-content-center">
+            <div class="text-center text-white px-3">
+                <h1 class="display-3 font-weight-bold mb-2">Fundamentals of Corporate Social Responsibility</h1>
+                <p class="lead mb-4">An interactive web presentation based on the academic research paper by Mikhail
+                    Pugachevskiy</p>
+                <a href="#registration-section" class="btn btn-lg btn-light font-weight-bold shadow-sm">Get Started</a>
+            </div>
+        </div>
+
+        <!-- Visitor Registration & Survey Form -->
+        <div class="container my-5" id="registration-section">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 rounded-lg">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="card-title text-center font-weight-bold mb-3">Welcome Reader!</h2>
+                            <p class="text-muted text-center mb-4">
+                                Please fill out the form below to unlock access to all thesis chapters and automatically
+                                receive/download the full PDF paper.
+                            </p>
+
+                            <form id="csrWelcomeForm" novalidate>
+                                <!-- First and Last Name Inputs -->
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="firstName" class="font-weight-bold">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName" required
+                                            placeholder="e.g. John">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="lastName" class="font-weight-bold">Last Name *</label>
+                                        <input type="text" class="form-control" id="lastName" required
+                                            placeholder="e.g. Doe">
+                                    </div>
+                                </div>
+
+                                <!-- Email Input -->
+                                <div class="form-group">
+                                    <label for="emailAddress" class="font-weight-bold">Email Address *</label>
+                                    <input type="email" class="form-control" id="emailAddress" required
+                                        placeholder="e.g. john.doe@example.com">
+                                </div>
+
+                                <!-- Highest Educational Level Dropdown -->
+                                <div class="form-group">
+                                    <label for="educationLevel" class="font-weight-bold">Highest Level of Education
+                                        *</label>
+                                    <select class="form-control" id="educationLevel" required>
+                                        <option value="" disabled selected>Please select your qualification...</option>
+                                        <option value="Hauptschulabschluss">Secondary School Certificate
+                                            (Hauptschulabschluss)</option>
+                                        <option value="Realschulabschluss">Intermediate School Certificate
+                                            (Realschulabschluss)</option>
+                                        <option value="Abitur">High School Diploma (Abitur)</option>
+                                        <option value="Berufsausbildung">Vocational Training (Berufsausbildung)</option>
+                                        <option value="Bachelor">Bachelor's Degree</option>
+                                        <option value="Diplom">Diploma Degree (Diplom)</option>
+                                        <option value="Master">Master's Degree</option>
+                                        <option value="PhD">Doctorate / PhD</option>
+                                    </select>
+                                </div>
+
+                                <!-- CSR Familiarity Ranking Scale (0 to 3) -->
+                                <div class="form-group my-4">
+                                    <label class="font-weight-bold d-block mb-2">How familiar are you with Corporate
+                                        Social Responsibility? *</label>
+                                    <div class="row text-center">
+                                        <div class="col-3">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="rank0" name="csrRank" value="0"
+                                                    class="custom-control-input" required>
+                                                <label class="custom-control-label d-block text-small" for="rank0">
+                                                    <strong>0</strong><br><span class="text-muted">No knowledge</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="rank1" name="csrRank" value="1"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label d-block text-small" for="rank1">
+                                                    <strong>1</strong><br><span class="text-muted">Slightly
+                                                        familiar</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="rank2" name="csrRank" value="2"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label d-block text-small" for="rank2">
+                                                    <strong>2</strong><br><span class="text-muted">Sufficient
+                                                        knowledge</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="rank3" name="csrRank" value="3"
+                                                    class="custom-control-input">
+                                                <label class="custom-control-label d-block text-small" for="rank3">
+                                                    <strong>3</strong><br><span class="text-muted">Specialist</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CSR Prior Knowledge Text Area with Word Limit -->
+                                <div class="form-group">
+                                    <label for="priorKnowledge" class="font-weight-bold">Describe your prior knowledge
+                                        about CSR:</label>
+                                    <textarea class="form-control" id="priorKnowledge" rows="4"
+                                        placeholder="Briefly state what you know or expect regarding CSR..."></textarea>
+                                    <small class="form-text text-muted text-right">
+                                        Word count: <span id="wordCountDisplay">0</span> / 100 words max
+                                    </small>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-primary btn-block btn-lg font-weight-bold mt-4">
+                                    Submit & Access Full Thesis
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS Libraries & Page Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="../ts/landing.js"></script>
+</body>
+
+</html>
