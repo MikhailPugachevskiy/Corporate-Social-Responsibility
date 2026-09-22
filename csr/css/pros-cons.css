@@ -1,0 +1,20 @@
+/* Chapter 5: Pros & Cons Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 56px;
+}
+
+.navbar {
+    background-color: #1a252f !important;
+}
+
+.hero {
+    min-height: 35vh;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    padding: 60px 0;
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+}
