@@ -1,0 +1,26 @@
+/* Chapter 3: Facets Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 56px;
+}
+
+.navbar {
+    background-color: #1a252f !important;
+}
+
+.hero {
+    min-height: 35vh;
+    background: linear-gradient(135deg, #6f42c1 0%, #4e2a84 100%);
+    padding: 60px 0;
+}
+
+/* Carroll's Pyramid Accordion Headers */
+.accordion .card-header {
+    border-radius: 4px;
+}
+
+/* Sensemaking Cards */
+.card-title {
+    font-size: 1.15rem;
+}
