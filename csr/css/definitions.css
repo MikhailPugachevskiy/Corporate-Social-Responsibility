@@ -1,0 +1,27 @@
+/* Chapter 2: Definitions Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 56px;
+}
+
+.navbar {
+    background-color: #1a252f !important;
+}
+
+.hero {
+    min-height: 35vh;
+    background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+    padding: 60px 0;
+}
+
+/* Border Left Highlight for Quote Box */
+.border-left-primary {
+    border-left: 5px solid #007bff !important;
+}
+
+/* Diagram Container Styling */
+.img-fluid {
+    max-height: 320px;
+    object-fit: contain;
+}
