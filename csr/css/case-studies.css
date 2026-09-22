@@ -1,0 +1,21 @@
+/* Chapter 4: Case Studies Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 56px;
+}
+
+.navbar {
+    background-color: #1a252f !important;
+}
+
+.hero {
+    min-height: 35vh;
+    background: linear-gradient(135deg, #fd7e14 0%, #d9534f 100%);
+    padding: 60px 0;
+}
+
+.badge {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
