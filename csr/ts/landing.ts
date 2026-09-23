@@ -79,5 +79,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 unlockedAt: new Date().toISOString()
             };
 
+            // Daten lokal speichern & Status freischalten
+            localStorage.setItem("csr_user_data", JSON.stringify(userData));
+            localStorage.setItem("csr_unlocked", "true");
 
+            // Navigation freischalten
+            unlockNavigation();
+
+            // Automatischer PDF-Download aus dem assets/pdf Ordner
+            downloadPDF();
+
+            // Erfolgsmeldung und Weiterleitung zu Kapitel 1
+            alert(`Thank you, ${firstName}! Access to all chapters is now unlocked. Your PDF download will start automatically.`);
+            window.location.href = "introduction.html";
         });
+    }
