@@ -23,3 +23,38 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            var text = priorKnowledgeInput ? priorKnowledgeInput.value.trim() : "";
+            var wordCount = text ? text.split(/\s+/).length : 0;
+
+            if (wordCount > 100) {
+                alert("Please limit your prior knowledge text to a maximum of 100 words.");
+                return;
+            }
+
+            if (!form.checkValidity()) {
+                form.classList.add("was-validated");
+                return;
+            }
+
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("emailAddress").value;
+            var education = document.getElementById("educationLevel").value;
+            var selectedRank = document.querySelector('input[name="csrRank"]:checked');
+            var csrRank = selectedRank ? selectedRank.value : "0";
+
+            var userData = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                education: education,
+                csrRank: csrRank,
+                priorKnowledge: text,
+                unlockedAt: new Date().toISOString()
+            };
