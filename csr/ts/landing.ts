@@ -20,4 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isUnlocked) {
         unlockNavigation();
     }
+
+    // 2. Wortzähler für das Textfeld (Maximal 100 Wörter)
+    if (priorKnowledgeInput && wordCountDisplay) {
+        priorKnowledgeInput.addEventListener("input", () => {
+            const text = priorKnowledgeInput.value.trim();
+            const words = text ? text.split(/\s+/).length : 0;
+
+            wordCountDisplay.textContent = words.toString();
+
+            if (words > 100) {
+                wordCountDisplay.classList.add("text-danger");
+                wordCountDisplay.classList.remove("text-muted");
+            } else {
+                wordCountDisplay.classList.remove("text-danger");
+                wordCountDisplay.classList.add("text-muted");
+            }
+        });
+    }
+
+
+
+
 });
