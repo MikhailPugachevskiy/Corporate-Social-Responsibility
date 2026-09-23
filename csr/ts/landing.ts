@@ -94,3 +94,22 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "introduction.html";
         });
     }
+
+    // Funktion zum Freischalten der Navigations-Links
+    function unlockNavigation(): void {
+        navLinks.forEach((link) => {
+            link.classList.remove("locked-nav", "disabled");
+            link.classList.add("unlocked");
+        });
+    }
+
+    // Funktion zum Auslösen des PDF-Downloads
+    function downloadPDF(): void {
+        const link = document.createElement("a");
+        link.href = "../assets/pdf/Studienarbeit_CSR.pdf";
+        link.download = "Studienarbeit_CSR.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+});
