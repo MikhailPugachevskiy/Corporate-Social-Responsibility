@@ -58,3 +58,31 @@ document.addEventListener("DOMContentLoaded", function () {
                 priorKnowledge: text,
                 unlockedAt: new Date().toISOString()
             };
+
+            localStorage.setItem("csr_user_data", JSON.stringify(userData));
+            localStorage.setItem("csr_unlocked", "true");
+
+            unlockNavigation();
+            downloadPDF();
+
+            alert("Thank you, " + firstName + "! Access to all chapters is now unlocked. Your PDF download will start automatically.");
+            window.location.href = "introduction.html";
+        });
+    }
+
+    function unlockNavigation() {
+        navLinks.forEach(function (link) {
+            link.classList.remove("locked-nav", "disabled");
+            link.classList.add("unlocked");
+        });
+    }
+
+    function downloadPDF() {
+        var link = document.createElement("a");
+        link.href = "../assets/pdf/Studienarbeit_CSR.pdf";
+        link.download = "Studienarbeit_CSR.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+});
