@@ -60,6 +60,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
+            // Formulardaten auslesen
+            const firstName = (document.getElementById("firstName") as HTMLInputElement).value;
+            const lastName = (document.getElementById("lastName") as HTMLInputElement).value;
+            const email = (document.getElementById("emailAddress") as HTMLInputElement).value;
+            const education = (document.getElementById("educationLevel") as HTMLSelectElement).value;
+
+            const selectedRank = document.querySelector('input[name="csrRank"]:checked') as HTMLInputElement | null;
+            const csrRank = selectedRank ? selectedRank.value : "0";
+
+            const userData: CSRUserData = {
+                firstName,
+                lastName,
+                email,
+                education,
+                csrRank,
+                priorKnowledge: text,
+                unlockedAt: new Date().toISOString()
+            };
 
 
         });
