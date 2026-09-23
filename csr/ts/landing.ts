@@ -39,7 +39,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // 3. Formular-Absendelogik
+    if (form) {
+        form.addEventListener("submit", (event: Event) => {
+            event.preventDefault();
+            event.stopPropagation();
+
+            // Wortanzahl vor dem Absenden prüfen
+            const text = priorKnowledgeInput ? priorKnowledgeInput.value.trim() : "";
+            const wordCount = text ? text.split(/\s+/).length : 0;
+
+            if (wordCount > 100) {
+                alert("Please limit your prior knowledge text to a maximum of 100 words.");
+                return;
+            }
+
+            // HTML5-Validierung prüfen
+            if (!form.checkValidity()) {
+                form.classList.add("was-validated");
+                return;
+            }
 
 
 
-});
+        });
