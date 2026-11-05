@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function downloadPDF() {
         var link = document.createElement("a");
-        link.href = "../assets/pdf/Studienarbeit_CSR.pdf";
+        link.href = "../assets/pdf/Studienarbeit.pdf";
         link.download = "Studienarbeit_CSR.pdf";
         document.body.appendChild(link);
         link.click();
