@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Funktion zum Auslösen des PDF-Downloads
     function downloadPDF(): void {
         const link = document.createElement("a");
-        link.href = "../assets/pdf/Studienarbeit_CSR.pdf";
+        link.href = "../assets/pdf/Studienarbeit.pdf";
         link.download = "Studienarbeit_CSR.pdf";
         document.body.appendChild(link);
         link.click();
