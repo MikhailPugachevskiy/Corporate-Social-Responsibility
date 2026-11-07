@@ -23,7 +23,7 @@ Die Oberfläche und die Inhalte der Website sind auf **Englisch**, die Lerndokum
 | HTML5 | Struktur der sieben Seiten |
 | CSS3 | eigene Stile pro Seite (Farbverläufe, Hover-Effekte) |
 | Bootstrap 4.5 | Raster, Karten, Formulare, Navigationsleiste (per CDN) |
-| TypeScript | Logik des Formulars und der Zugriffsprüfung (`csr/ts/`) |
+| TypeScript | Logik des Formulars und der Zugriffsprüfung (`ts/`) |
 | JavaScript | die aus TypeScript übersetzten Dateien, die der Browser ausführt |
 | Browser `localStorage` | speichert Freischaltung und Formulardaten im Browser |
 
@@ -35,26 +35,27 @@ Die Website braucht **keinen Server** und keine Datenbank. Wegen der Bibliotheke
 
 ```
 Corporate-Social-Responsibility/
-├── csr/
-│   ├── index.html          # Einstieg: leitet auf html/landing.html weiter
-│   ├── html/
-│   │   ├── landing.html    # Landing Page mit Formular
-│   │   ├── introduction.html
-│   │   ├── definitions.html
-│   │   ├── facets.html
-│   │   ├── case-studies.html
-│   │   ├── pros-cons.html
-│   │   └── perspectives.html
-│   ├── css/                # eine CSS-Datei pro Seite
-│   ├── ts/
-│   │   ├── landing.ts      # Quelle: Formular, Wortzähler, Freischaltung, PDF-Download
-│   │   ├── landing.js      # übersetzte Fassung, wird von landing.html geladen
-│   │   ├── auth-check.ts   # Quelle: Zugriffsprüfung der Kapitelseiten
-│   │   └── auth-check.js   # übersetzte Fassung, wird von allen Kapiteln geladen
-│   └── assets/
-│       ├── pdf/Studienarbeit.pdf
-│       └── img/            # drei Abbildungen
+├── index.html              # Einstieg: leitet auf html/landing.html weiter
+├── html/
+│   ├── landing.html        # Landing Page mit Formular
+│   ├── introduction.html
+│   ├── definitions.html
+│   ├── facets.html
+│   ├── case-studies.html
+│   ├── pros-cons.html
+│   └── perspectives.html
+├── css/                    # eine CSS-Datei pro Seite
+├── ts/
+│   ├── landing.ts          # Quelle: Formular, Wortzähler, Freischaltung, PDF-Download
+│   ├── landing.js          # übersetzte Fassung, wird von landing.html geladen
+│   ├── auth-check.ts       # Quelle: Zugriffsprüfung der Kapitelseiten
+│   └── auth-check.js       # übersetzte Fassung, wird von allen Kapiteln geladen
+├── assets/
+│   ├── pdf/Studienarbeit.pdf
+│   └── img/                # drei Abbildungen
 ├── doc/                    # Lerndokumentation (Deutsch)
+├── README.md
+├── .gitattributes
 └── Governanceethik-als-Diskursethik.pptx   # zusätzliches Präsentationsmaterial, nicht Teil der Website
 ```
 
@@ -80,8 +81,8 @@ Der Ordner [`doc/`](doc/README.md) enthält eine **Lerndokumentation** des Codes
 ## Die Website lokal öffnen
 
 1. Repository herunterladen oder klonen.
-2. Die Datei `csr/index.html` im Browser öffnen. Sie leitet automatisch zur Landing Page weiter.
-   Für die Entwicklung eignet sich ein lokaler Server, z. B. die VS-Code-Erweiterung **Live Server** (Rechtsklick auf `csr/index.html`, „Open with Live Server“) oder `npx serve csr` im Terminal.
+2. Die Datei `index.html` im Browser öffnen. Sie leitet automatisch zur Landing Page weiter.
+   Für die Entwicklung eignet sich ein lokaler Server, z. B. die VS-Code-Erweiterung **Live Server** (Rechtsklick auf `index.html`, „Open with Live Server“) oder `npx serve csr` im Terminal.
 3. Das Formular ausfüllen und absenden. Danach sind die Kapitel freigeschaltet.
 
 ### TypeScript neu kompilieren
@@ -89,7 +90,7 @@ Der Ordner [`doc/`](doc/README.md) enthält eine **Lerndokumentation** des Codes
 Der Browser führt nur die `.js`-Dateien aus. Wenn du eine `.ts`-Datei änderst, musst du sie neu übersetzen:
 
 ```bash
-npx tsc csr/ts/landing.ts csr/ts/auth-check.ts
+npx tsc ts/landing.ts ts/auth-check.ts
 ```
 
 ---
