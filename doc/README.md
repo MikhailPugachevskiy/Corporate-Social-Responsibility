@@ -30,7 +30,7 @@ Lies die Kapitel in dieser Reihenfolge:
 
 ## Tipps zum Arbeiten mit den Kapiteln
 
-- **Öffne die Website parallel.** Am einfachsten geht das mit der VS-Code-Erweiterung „Live Server“ (Rechtsklick auf `csr/index.html`).
+- **Öffne die Website parallel.** Am einfachsten geht das mit der VS-Code-Erweiterung „Live Server“ (Rechtsklick auf `index.html`).
 - **Öffne die Entwicklerwerkzeuge (F12).** Die Reiter **Console**, **Network** und **Application → Local Storage** werden in den Kapiteln 3, 4 und 7 oft gebraucht.
 - **Ändere eine Datei nach jeder „Mach es selbst“-Aufgabe zurück.** Mit Git (`git restore <Datei>`) oder dem Rückgängig-Befehl des Editors.
-- **Bei TypeScript-Änderungen neu kompilieren:** `npx tsc csr/ts/landing.ts csr/ts/auth-check.ts`. Sonst ändert sich im Browser nichts (Kapitel 0 und 7).
+- **Bei TypeScript-Änderungen neu kompilieren:** `npx tsc ts/landing.ts ts/auth-check.ts`. Sonst ändert sich im Browser nichts (Kapitel 0 und 7).
