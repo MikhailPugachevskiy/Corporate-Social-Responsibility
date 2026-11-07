@@ -11,7 +11,7 @@ In diesem Kapitel geht es um den **HTML-Aufbau** und die **Bootstrap-Klassen**. 
 
 ---
 
-## Datei: `csr/html/landing.html`
+## Datei: `html/landing.html`
 
 ### Teil 1: Der Hero-Bereich (Z. 52–61)
 
