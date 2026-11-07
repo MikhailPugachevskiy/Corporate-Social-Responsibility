@@ -20,11 +20,11 @@ Es gibt **keinen Server** und keine Datenbank. Alles läuft im Browser. Der Frei
 
 | Technologie | Wofür | Wo im Projekt |
 | --- | --- | --- |
-| **HTML5** | Struktur und Inhalt der Seiten | `csr/html/*.html`, `csr/index.html` |
-| **CSS3** | eigenes Aussehen (Farben, Verläufe, Hover-Effekte) | `csr/css/*.css` |
+| **HTML5** | Struktur und Inhalt der Seiten | `html/*.html`, `index.html` |
+| **CSS3** | eigenes Aussehen (Farben, Verläufe, Hover-Effekte) | `css/*.css` |
 | **Bootstrap 4.5** | fertiges Raster, Karten, Buttons, Navigationsleiste | per CDN in jeder Seite eingebunden |
-| **TypeScript** | typisierte Programmlogik für das Formular und den Zugriffsschutz | `csr/ts/landing.ts`, `csr/ts/auth-check.ts` |
-| **JavaScript** | die kompilierte Fassung der TypeScript-Dateien, die der Browser ausführt | `csr/ts/landing.js`, `csr/ts/auth-check.js` |
+| **TypeScript** | typisierte Programmlogik für das Formular und den Zugriffsschutz | `ts/landing.ts`, `ts/auth-check.ts` |
+| **JavaScript** | die kompilierte Fassung der TypeScript-Dateien, die der Browser ausführt | `ts/landing.js`, `ts/auth-check.js` |
 | **jQuery (slim) und Popper** | werden von Bootstrap 4 für die ausklappbare Navigation benötigt | per CDN eingebunden |
 | **Google Fonts** | die Schrift „Open Sans“ | per CDN eingebunden |
 | **localStorage** | speichert Freischaltung und Formulardaten im Browser | `landing.ts`, `auth-check.ts` |
@@ -35,15 +35,16 @@ Es gibt **keinen Server** und keine Datenbank. Alles läuft im Browser. Der Frei
 
 ```
 Corporate-Social-Responsibility/
-├── csr/
-│   ├── index.html            # Einstieg: leitet auf html/landing.html weiter
-│   ├── html/                 # sieben Seiten: landing + sechs Kapitel
-│   ├── css/                  # pro Seite eine CSS-Datei
-│   ├── ts/                   # TypeScript-Quellen und die kompilierten JS-Dateien
-│   └── assets/
-│       ├── pdf/              # die Studienarbeit als PDF
-│       └── img/              # drei Abbildungen für die Kapitel 2 und 3
+├── index.html                # Einstieg: leitet auf html/landing.html weiter
+├── html/                     # sieben Seiten: landing + sechs Kapitel
+├── css/                      # pro Seite eine CSS-Datei
+├── ts/                       # TypeScript-Quellen und die kompilierten JS-Dateien
+├── assets/
+│   ├── pdf/                  # die Studienarbeit als PDF
+│   └── img/                  # drei Abbildungen für die Kapitel 2 und 3
 ├── doc/                      # Lerndokumentation (diese Dateien)
+├── README.md
+├── .gitattributes
 └── Governanceethik-als-Diskursethik.pptx   # zusätzliches Präsentationsmaterial (nicht Teil der Website)
 ```
 
@@ -71,7 +72,7 @@ Im Projekt liegen deshalb **beide** Dateien nebeneinander:
 - `landing.ts` ist die Quelle, die man bearbeitet.
 - `landing.js` ist das Ergebnis der Übersetzung und wird von `landing.html` geladen.
 
-Die HTML-Seiten binden immer die `.js`-Datei ein, nie die `.ts`-Datei. **Wichtig:** Wenn man eine `.ts`-Datei ändert, muss man sie neu kompilieren, sonst ändert sich im Browser nichts. Im Projekt gibt es dafür weder `package.json` noch Build-Werkzeuge. Das Kompilieren geschieht von Hand, z. B. mit `npx tsc csr/ts/landing.ts csr/ts/auth-check.ts`.
+Die HTML-Seiten binden immer die `.js`-Datei ein, nie die `.ts`-Datei. **Wichtig:** Wenn man eine `.ts`-Datei ändert, muss man sie neu kompilieren, sonst ändert sich im Browser nichts. Im Projekt gibt es dafür weder `package.json` noch Build-Werkzeuge. Das Kompilieren geschieht von Hand, z. B. mit `npx tsc ts/landing.ts ts/auth-check.ts`.
 
 ---
 
@@ -161,7 +162,7 @@ Weil das Skript auf HTML-Elemente zugreift. Stünde es im `<head>`, wären diese
 
 ## Mach es selbst
 
-1. Öffne `csr/index.html` in deinem Browser (am besten über die VS-Code-Erweiterung „Live Server“). Wohin wirst du geleitet?
+1. Öffne `index.html` in deinem Browser (am besten über die VS-Code-Erweiterung „Live Server“). Wohin wirst du geleitet?
 2. Ändere in `landing.html` den Text im `<title>` (Z. 7). Was siehst du im Browser-Tab?
 3. Öffne die Entwicklerwerkzeuge (F12) und den Reiter **Network**. Lade `landing.html` neu. Welche Dateien kommen von fremden Servern (CDN) und welche aus dem Projekt?
 4. Schalte die Internetverbindung aus und lade die Seite neu. Was ändert sich am Aussehen?
