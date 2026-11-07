@@ -8,7 +8,7 @@ Eine Multi-Page-Website besteht aus vielen HTML-Dateien, die über **Links** ver
 
 ---
 
-## Datei: `csr/index.html` (Die Weiterleitung)
+## Datei: `index.html` (Die Weiterleitung)
 
 ```html
   1 | <!DOCTYPE html>
@@ -33,7 +33,7 @@ Eine Multi-Page-Website besteht aus vielen HTML-Dateien, die über **Links** ver
 - **Z. 7** Der Tab-Titel, der nur kurz sichtbar ist.
 - **Z. 11** Ein **Fallback**: Falls die Weiterleitung nicht klappt, kann der Nutzer den Link anklicken. Das ist gute Praxis, weil manche Browser oder Einstellungen die Weiterleitung blockieren.
 
-**Warum gibt es `index.html`?** Server und Hosting-Dienste (z. B. GitHub Pages) öffnen bei einer Adresse wie `https://…/csr/` automatisch die Datei `index.html`. So landet jeder Besucher auf der Landing Page, ohne dass er den Pfad `html/landing.html` kennen muss.
+**Warum gibt es `index.html`?** Server und Hosting-Dienste (z. B. GitHub Pages) öffnen bei der Adresse automatisch die Datei `index.html`. So landet jeder Besucher auf der Landing Page, ohne dass er den Pfad `html/landing.html` kennen muss.
 
 ---
 
@@ -55,7 +55,7 @@ Ein falscher Pfad führt zu einem **404-Fehler**: Die Datei wird nicht geladen, 
 
 ## Die Navigationsleiste auf der Landing Page
 
-### Datei: `csr/html/landing.html` (Z. 18–50)
+### Datei: `html/landing.html` (Z. 18–50)
 
 ```html
  18 |     <!-- Main Navigation Bar with 6 main chapters (Locked initially until user completes form) -->
@@ -133,7 +133,7 @@ Dieser Block wiederholt sich auf allen sechs Kapitelseiten. Nur die Position von
 
 ## Die Fußzeile auf den Kapitelseiten
 
-### Datei: `csr/html/introduction.html` (Z. 153–159)
+### Datei: `html/introduction.html` (Z. 153–159)
 
 ```html
 153 |     <!-- Footer Navigation Controls -->
