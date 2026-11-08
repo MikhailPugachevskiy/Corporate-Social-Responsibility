@@ -9,7 +9,7 @@ Dieses Kapitel erklärt das Prüfskript und, genauso wichtig, **wo die Grenzen**
 
 ---
 
-## Datei: `csr/ts/auth-check.ts`
+## Datei: `ts/auth-check.ts`
 
 ```ts
   1 | // Prüft auf Kapitelseiten, ob der Nutzer freigeschaltet ist
@@ -32,7 +32,7 @@ Dieses Kapitel erklärt das Prüfskript und, genauso wichtig, **wo die Grenzen**
 - **Z. 6** Zeigt eine Meldung. `alert` hält die Seite an, bis der Nutzer auf „OK“ klickt.
 - **Z. 7** Schickt den Besucher zur Landing Page. Der Pfad `landing.html` gilt, weil alle Kapitelseiten im selben Ordner `html/` liegen.
 
-## Datei: `csr/ts/auth-check.js` (die übersetzte Fassung)
+## Datei: `ts/auth-check.js` (die übersetzte Fassung)
 
 ```js
   1 | // Prüft auf Kapitelseiten, ob der Nutzer freigeschaltet ist
