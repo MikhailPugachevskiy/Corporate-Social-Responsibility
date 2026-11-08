@@ -3,7 +3,7 @@
 Das Aussehen der Website entsteht aus **zwei Schichten**:
 
 1. **Bootstrap 4.5** liefert das Grundgerüst: Raster, Karten, Buttons, Abstände, Navigationsleiste.
-2. **Eigene CSS-Dateien** (`csr/css/`) ergänzen und überschreiben es: Farben, Farbverläufe, Hover-Effekte, Feinheiten.
+2. **Eigene CSS-Dateien** (`css/`) ergänzen und überschreiben es: Farben, Farbverläufe, Hover-Effekte, Feinheiten.
 
 Dieses Kapitel erklärt, wie diese beiden Schichten zusammenspielen, welche Regeln die eigenen Dateien enthalten und was man verbessern könnte.
 
