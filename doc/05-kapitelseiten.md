@@ -141,36 +141,36 @@ Alle Kapitel nutzen dieselben Bootstrap-Bausteine. Die folgende Tabelle zeigt, w
 ### Kapitel 3: Gestapelte Karten (`facets.html`)
 
 ```html
-116 |                                 <div class="accordion" id="pyramidAccordion">
-117 |                                     <div class="card border-0 mb-2 shadow-sm">
-118 |                                         <div class="card-header bg-danger text-white py-2" id="headingPhilanthropic">
-119 |                                             <h6 class="mb-0 font-weight-bold">1. Philanthropic Responsibilities</h6>
-120 |                                         </div>
-121 |                                         <div class="card-body p-3">
-122 |                                             <p class="small text-muted mb-0">Be a good corporate citizen. Voluntary
-123 |                                                 resources contributed to improve quality of life beyond societal
-124 |                                                 expectations.</p>
-125 |                                         </div>
-126 |                                     </div>
+117 |                                 <div class="accordion" id="pyramidAccordion">
+118 |                                     <div class="card border-0 mb-2 shadow-sm">
+119 |                                         <div class="card-header bg-danger text-white py-2" id="headingPhilanthropic">
+120 |                                             <h6 class="mb-0 font-weight-bold">1. Philanthropic Responsibilities</h6>
+121 |                                         </div>
+122 |                                         <div class="card-body p-3">
+123 |                                             <p class="small text-muted mb-0">Be a good corporate citizen. Voluntary
+124 |                                                 resources contributed to improve quality of life beyond societal
+125 |                                                 expectations.</p>
+126 |                                         </div>
+127 |                                     </div>
 ```
 
-- **Z. 116** `accordion` ist in Bootstrap der Name für **ausklappbare** Abschnitte. Hier sind die Abschnitte aber **immer geöffnet**: Es gibt kein `collapse` und kein `data-toggle`. Die Klasse dient nur dem Styling (`facets.css` gibt den Kopfzeilen abgerundete Ecken).
-- **Z. 118** Jede Stufe der Pyramide hat eine **eigene Farbe** durch Bootstrap-Hintergrundklassen (`bg-danger`, `bg-warning`, `bg-info`, `bg-secondary`). Die Reihenfolge entspricht der Pyramide von oben (philanthropisch) nach unten (ökonomisch).
-- **Z. 118** Die `id`s (`headingPhilanthropic` usw.) haben aktuell keine Funktion. Sie wären nötig, wenn man den Bereich ausklappbar machen würde.
+- **Z. 117** `accordion` ist in Bootstrap der Name für **ausklappbare** Abschnitte. Hier sind die Abschnitte aber **immer geöffnet**: Es gibt kein `collapse` und kein `data-toggle`. Die Klasse dient nur dem Styling (`facets.css` gibt den Kopfzeilen abgerundete Ecken).
+- **Z. 119** Jede Stufe der Pyramide hat eine **eigene Farbe** durch Bootstrap-Hintergrundklassen (`bg-danger`, `bg-warning`, `bg-info`, `bg-secondary`). Die Reihenfolge entspricht der Pyramide von oben (philanthropisch) nach unten (ökonomisch).
+- **Z. 119** Die `id`s (`headingPhilanthropic` usw.) haben aktuell keine Funktion. Sie wären nötig, wenn man den Bereich ausklappbar machen würde.
 
 ### Kapitel 4: Zitatbox mit Takeaway (`case-studies.html`)
 
 ```html
-152 |                             <blockquote
-153 |                                 class="blockquote bg-white p-3 rounded border-left border-danger text-muted mb-0 mt-2 small">
-154 |                                 <em>Takeaway: CSR cannot exist merely as a public relations tool. Without genuine
-155 |                                     alignment between top-level strategy, executive incentives, and ethical standards,
-156 |                                     public credibility can be destroyed instantly.</em>
-157 |                             </blockquote>
+154 |                             <blockquote
+155 |                                 class="blockquote bg-white p-3 rounded border-left border-danger text-muted mb-0 mt-2 small">
+156 |                                 <em>Takeaway: CSR cannot exist merely as a public relations tool. Without genuine
+157 |                                     alignment between top-level strategy, executive incentives, and ethical standards,
+158 |                                     public credibility can be destroyed instantly.</em>
+159 |                             </blockquote>
 ```
 
-- **Z. 153** Eine Zitatbox **nur mit Bootstrap-Klassen**: `border-left border-danger` ergibt einen roten Streifen links. Im Gegensatz zu Kapitel 2 braucht es hier keine eigene CSS-Klasse.
-- **Z. 154** `<em>` bedeutet Betonung und wird kursiv dargestellt.
+- **Z. 155** Eine Zitatbox **nur mit Bootstrap-Klassen**: `border-left border-danger` ergibt einen roten Streifen links. Im Gegensatz zu Kapitel 2 braucht es hier keine eigene CSS-Klasse.
+- **Z. 156** `<em>` bedeutet Betonung und wird kursiv dargestellt.
 
 ### Kapitel 5: Zwei gleich hohe Spalten (`pros-cons.html`)
 
