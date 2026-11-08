@@ -1,6 +1,6 @@
 # 3. Landing Page (TypeScript): Wortzähler, Formular und Freischaltung
 
-Die Datei `csr/ts/landing.ts` bringt die Landing Page zum Leben. Sie macht vier Dinge:
+Die Datei `ts/landing.ts` bringt die Landing Page zum Leben. Sie macht vier Dinge:
 
 1. prüft beim Laden, ob der Nutzer schon **freigeschaltet** ist,
 2. zählt beim Tippen die **Wörter** im Textfeld (maximal 100),
@@ -25,7 +25,7 @@ Der Browser baut aus dem HTML einen Baum aus Objekten, das **DOM** (Document Obj
 
 ---
 
-## Datei: `csr/ts/landing.ts`
+## Datei: `ts/landing.ts`
 
 ### Teil 1: Interface, Start und Prüfung des Status (Z. 1–22)
 
@@ -251,7 +251,7 @@ Hoisting: Funktionsdeklarationen werden beim Ausführen des Blocks „nach oben 
 
 ## Mach es selbst
 
-1. Ändere das Limit von `100` auf `20` (Z. 32 und Z. 52). Kompiliere die Datei neu (`npx tsc csr/ts/landing.ts`). Was passiert beim Tippen? Und was passiert, wenn du die `.js`-Datei **nicht** neu erzeugst?
+1. Ändere das Limit von `100` auf `20` (Z. 32 und Z. 52). Kompiliere die Datei neu (`npx tsc ts/landing.ts`). Was passiert beim Tippen? Und was passiert, wenn du die `.js`-Datei **nicht** neu erzeugst?
 2. Öffne nach dem Absenden die Entwicklerwerkzeuge → **Application** → **Local Storage**. Welche beiden Einträge findest du, und wie sieht `csr_user_data` aus?
 3. Lösche `csr_unlocked` im Local Storage und lade die Landing Page neu. Welcher Zustand zeigt sich in der Navigation?
 4. Setze in Z. 59 statt `was-validated` einen `alert("Please fill in all required fields.")`. Wie fühlt sich das für Nutzer an im Vergleich zu den farbigen Feldern?
