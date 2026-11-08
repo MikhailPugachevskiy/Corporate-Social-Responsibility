@@ -61,10 +61,10 @@ Diese Punkte sind keine Abstürze, könnten aber verbessert werden. Sie sind gut
 | Zurück-Button führt in eine Schleife | `window.location.href` legt einen Verlaufseintrag an | `auth-check.ts`, Z. 7 | `window.location.replace(...)` verwenden |
 | E-Mail wird nicht genutzt | Die Adresse wird nur im Browser gespeichert und nie gesendet oder gelesen | `landing.ts`, Z. 83 | Feld entfernen oder an einen Dienst anbinden (und die Datenschutzhinweise ergänzen) |
 | Navigation in jeder Datei kopiert | Eine Änderung muss in sieben Dateien erfolgen | alle HTML-Dateien | ein Build-Werkzeug oder ein Framework mit Komponenten |
-| Gemeinsames CSS wiederholt | `body`, `.navbar`, `.hero` stehen in jeder CSS-Datei | `csr/css/*.css` | eine gemeinsame `base.css` (Kapitel 6) |
+| Gemeinsames CSS wiederholt | `body`, `.navbar`, `.hero` stehen in jeder CSS-Datei | `css/*.css` | eine gemeinsame `base.css` (Kapitel 6) |
 | `role="main"` am `<main>` | Doppelt gemeint, hat aber keine negative Wirkung | alle Seiten | optional entfernen |
 | `.pptx` im Hauptordner | Gehört thematisch nicht zur Website | Hauptordner | in einen eigenen Ordner (z. B. `materials/`) verschieben oder entfernen |
-| Kein Build-Prozess für TypeScript | `.ts` und `.js` müssen von Hand synchron gehalten werden | `csr/ts/` | eine `tsconfig.json` und ein npm-Skript zum Kompilieren |
+| Kein Build-Prozess für TypeScript | `.ts` und `.js` müssen von Hand synchron gehalten werden | `ts/` | eine `tsconfig.json` und ein npm-Skript zum Kompilieren |
 
 ---
 
@@ -73,7 +73,7 @@ Diese Punkte sind keine Abstürze, könnten aber verbessert werden. Sie sind gut
 **Wenn du `landing.ts` oder `auth-check.ts` änderst:**
 
 1. Ändere die `.ts`-Datei.
-2. Kompiliere sie neu: `npx tsc csr/ts/landing.ts csr/ts/auth-check.ts`.
+2. Kompiliere sie neu: `npx tsc ts/landing.ts ts/auth-check.ts`.
 3. Prüfe, dass die `.js`-Dateien aktualisiert wurden (Zeitstempel oder Git-Änderungen).
 4. Lade die Seite mit **Strg + F5** neu (leert den Cache für diese Seite).
 5. Prüfe Console und Network.
